@@ -16,7 +16,7 @@ public class StringCalculator {
             String delimiter = numbers.substring(2, delimiterIndex);
             String numberString = numbers.substring(delimiterIndex + 1);
 
-            // comma as a delimiter
+            // custom delimiter
             String[] numArray = numberString.split(java.util.regex.Pattern.quote(delimiter));
             int sum = 0;
             for (String num : numArray) {
@@ -24,19 +24,22 @@ public class StringCalculator {
                     int number = Integer.parseInt(num);
                     if (number < 0) {
                         negativeNumbers.add(num);
+                    } else if (number <= 1000) {
+                        sum += number;
                     }
-                    sum += number;
                 }
             }
 
-            // Throw exception for negative numbers
+            // handle negative numbers
             if (!negativeNumbers.isEmpty()) {
                 throw new IllegalArgumentException(
                         "Negative numbers not allowed: " + String.join(", ", negativeNumbers));
             }
 
             return sum;
+
         } else {
+
             String[] numArray = numbers.split("[,\n]");
             int sum = 0;
             for (String num : numArray) {
@@ -44,8 +47,9 @@ public class StringCalculator {
                     int number = Integer.parseInt(num);
                     if (number < 0) {
                         negativeNumbers.add(num);
+                    } else if (number <= 1000) {
+                        sum += number;
                     }
-                    sum += number;
                 }
             }
 
