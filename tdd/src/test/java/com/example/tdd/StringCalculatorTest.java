@@ -50,7 +50,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void negativeNumbersAndCustomDelimiter() {
+    public void negativeNumbersAndDelimiter() {
         StringCalculator calculator = new StringCalculator();
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             calculator.add("//;\n1;2;-3;-4");
@@ -65,8 +65,28 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void numbersGreaterThan1000WithCustomDelimiter() {
+    public void numbersGreaterThan1000WithDelimiter() {
         StringCalculator calculator = new StringCalculator();
         assertEquals(3, calculator.add("//;\n1;2;1001"), "String '//;\n1;2;1001' should return 3");
     }
+
+    @Test
+    public void longDelimiter() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(6, calculator.add("//[***]\n1***2***3"), "String '//[***]\n1***2***3' should return 6");
+    }
+
+    @Test
+    public void multipleDelimiters() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(6, calculator.add("//[*][%]\n1*2%3"), "String '//[*][%]\n1*2%3' should return 6");
+    }
+
+    @Test
+    public void testAddWithMultipleLongDelimiters() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(10, calculator.add("//[***][%%%]\n1***2%%% 3***4"),
+                "String '//[***][%%%]\n1***2%%% 3***4' should return 10");
+    }
+
 }

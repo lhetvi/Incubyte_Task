@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.tdd.StringCalculatorTest" time="0.065" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.tdd.StringCalculatorTest" time="0.07" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\KARANL~1\AppData\Local\Temp\surefire14194805602131446459\surefirebooter15989661567710675694.jar C:\Users\Karan Ladani\AppData\Local\Temp\surefire14194805602131446459 2024-07-30T17-41-13_920-jvmRun1 surefire4579943153983540580tmp surefire_013232187083863558606tmp"/>
+    <property name="sun.java.command" value="C:\Users\KARANL~1\AppData\Local\Temp\surefire1336628431035640331\surefirebooter1581025649571846199.jar C:\Users\Karan Ladani\AppData\Local\Temp\surefire1336628431035640331 2024-07-30T18-49-42_350-jvmRun1 surefire8825127570164512090tmp surefire_04028301086586104178tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\Incubyte\tdd\target\test-classes;E:\Incubyte\tdd\target\classes;C:\Users\Karan Ladani\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Karan Ladani\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Karan Ladani\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Karan Ladani\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Karan Ladani\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\Karan Ladani\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\KARANL~1\AppData\Local\Temp\surefire14194805602131446459\surefirebooter15989661567710675694.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\KARANL~1\AppData\Local\Temp\surefire1336628431035640331\surefirebooter1581025649571846199.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.7+8-LTS-224"/>
@@ -56,14 +56,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="negativeNumbers" classname="com.example.tdd.StringCalculatorTest" time="0.04"/>
-  <testcase name="testCustomDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
+  <testcase name="negativeNumbers" classname="com.example.tdd.StringCalculatorTest" time="0.036"/>
+  <testcase name="testAddWithMultipleLongDelimiters" classname="com.example.tdd.StringCalculatorTest" time="0"/>
   <testcase name="twoNumbers" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
+  <testcase name="customDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
+  <testcase name="longDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
   <testcase name="numbersWithNewLines" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
-  <testcase name="negativeNumbersAndCustomDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
-  <testcase name="testDifferentCustomDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
-  <testcase name="emptyString" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
-  <testcase name="numbersGreaterThan1000" classname="com.example.tdd.StringCalculatorTest" time="0"/>
+  <testcase name="multipleDelimiters" classname="com.example.tdd.StringCalculatorTest" time="0.002"/>
+  <testcase name="negativeNumbersAndDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0.003"/>
+  <testcase name="emptyString" classname="com.example.tdd.StringCalculatorTest" time="0"/>
+  <testcase name="numbersGreaterThan1000WithDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0"/>
+  <testcase name="numbersGreaterThan1000" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
   <testcase name="singleNumber" classname="com.example.tdd.StringCalculatorTest" time="0.001"/>
-  <testcase name="numbersGreaterThan1000WithCustomDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0"/>
+  <testcase name="commaDelimiter" classname="com.example.tdd.StringCalculatorTest" time="0"/>
 </testsuite>
